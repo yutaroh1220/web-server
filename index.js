@@ -34,7 +34,13 @@ app.get('/api/v1/users', function (req, res) {
   });
 });
 
-//localhost:3000　にアクセス
-app.listen(3000 ,function(){
+// //localhost:3000　にアクセス
+// app.listen(3000 ,function(){
+//   console.log("web-server is running.");
+// });
+
+//herokuのPORTを取得||localの3000番
+const PORT = process.env.PORT || 3000;
+app.listen(PORT ,function(){
   console.log("web-server is running.");
 });
